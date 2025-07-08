@@ -1,6 +1,6 @@
 # Fashion AI Setup and Usage Guide
 
-This guide explains how to clone, set up, and run the DensePose project from Facebook Research.
+This guide explains how to clone, set up, and run the project from Facebook Research.
 
 ---
 
