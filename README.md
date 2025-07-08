@@ -8,7 +8,7 @@ This guide explains how to clone, set up, and run the project from Facebook Rese
 
 
 - [Create and Activate Conda Environment](#create-and-activate-conda-environment)
-- [Clone Repository](#clone-repository)
+- [Densepose Repository Installation](#densepose-repository-installtion)
 - [Install Dependencies](#install-dependencies)
 - [Download Pretrained Model](#download-pretrained-model)
 - [Fix Black Background Issue](#fix-black-background-issue)
@@ -20,7 +20,7 @@ This guide explains how to clone, set up, and run the project from Facebook Rese
 
 
 
-# Setup Installation
+## Setup Installation
 
 1. **Python Version**
 
@@ -46,7 +46,7 @@ This guide explains how to clone, set up, and run the project from Facebook Rese
 4. **Place ONNX Folder**  
    After downloading, move the entire `onnx` folder into the **root directory** of your project (i.e., the same directory as your main scripts and `.env` file).
 
-## Clone Repository
+## DensePose Repository Installation
 
 Clone the Detectron2 repository and navigate to the DensePose project folder:
 
