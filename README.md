@@ -6,14 +6,45 @@ This guide explains how to clone, set up, and run the DensePose project from Fac
 
 ## Table of Contents
 
-- [Clone Repository](#clone-repository)
+
 - [Create and Activate Conda Environment](#create-and-activate-conda-environment)
+- [Clone Repository](#clone-repository)
 - [Install Dependencies](#install-dependencies)
 - [Download Pretrained Model](#download-pretrained-model)
 - [Fix Black Background Issue](#fix-black-background-issue)
 - [Run DensePose Inference](#run-densepose-inference)
+- [Setup Installation](#setup-installation)
+
 
 ---
+
+
+
+# Setup Installation
+
+1. **Python Version**
+
+   Make sure you have Python version **3.12.10** installed.
+
+2. **Install Requirements**
+
+   Install the required Python packages from `requirements.txt`:
+
+   ```bash
+   pip install -r requirements.txt
+
+   ```
+  Create a .env file in the project root directory and add your Groq API key like this: 
+
+  ```bash
+  GROQ_API_KEY="your_api_key"
+  ```
+3. **Download ONNX Folder**  
+   Download the `onnx` folder from the following Google Drive link:
+   [Link](https://drive.google.com/drive/folders/11wb58wtJfpQeAv7bqeS9v34EvO1ONEa_?usp=sharing)
+
+4. **Place ONNX Folder**  
+   After downloading, move the entire `onnx` folder into the **root directory** of your project (i.e., the same directory as your main scripts and `.env` file).
 
 ## Clone Repository
 
@@ -80,7 +111,6 @@ python apply_net.py \
   --opts MODEL.DEVICE cpu
 
 ```
-
 
 
 
