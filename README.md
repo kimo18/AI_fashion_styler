@@ -2,6 +2,23 @@
 
 This guide explains how to clone, set up, and run the project from Facebook Research.
 
+### Output Sequence Example
+
+<p align="center">
+  <img src="image.png" width="40%" /> 
+  <img src="image2.png" width="40%" /> 
+</p>
+
+<p align="center">
+  <strong>↓</strong>
+</p>
+
+<p align="center">
+  <img src="image3.png" width="45%" /> 
+</p>
+
+<p align="center"><em>Result after applying our Model</em></p>
+
 ---
 
 ## Table of Contents
