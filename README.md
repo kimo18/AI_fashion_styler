@@ -140,6 +140,19 @@ python apply_net.py \
   --opts MODEL.DEVICE cpu
 
 ```
+---
+
+## Citations & Acknowledgments
+
+This project makes use of the following open-source libraries and research contributions:
+
+- [**Detectron2**](https://github.com/facebookresearch/detectron2) – Facebook AI Research's platform for object detection and segmentation.
+- [**HR-VITON**](https://github.com/sangyun884/HR-VITON) – High-resolution virtual try-on network.
+- [**CIHP_PGN**](https://github.com/Engineering-Course/CIHP_PGN) – Pose-guided parsing network for human part segmentation.
+- [**MediaPipe Holistic Landmarker**](https://ai.google.dev/edge/mediapipe/solutions/vision/holistic_landmarker) – Google’s full-body landmark detection (face, hands, and body).
+- [**U²-Net**](https://github.com/xuebinqin/U-2-Net) – A powerful deep network for salient object detection.
+
+We are grateful to the authors and maintainers of these projects for their valuable contributions to the research and open-source communities.
 
 
 
