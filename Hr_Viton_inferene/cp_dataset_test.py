@@ -117,17 +117,19 @@ class CPDatasetTest(data.Dataset):
         c = {}
         cm = {}
         for key in self.c_names:
-            c_name[key] = self.c_names[key][index]
-            c[key] = Image.open(osp.join(self.data_path, 'cloth', c_name[key])).convert('RGB')
-            c[key] = transforms.Resize(self.fine_width, interpolation=2)(c[key])
-            cm[key] = Image.open(osp.join(self.data_path, 'cloth-mask', c_name[key]))
-            cm[key] = transforms.Resize(self.fine_width, interpolation=0)(cm[key])
+            if key == "unpaired":
+                c_name[key] = self.c_names[key][index]
+                print(self.c_names[key][index])
+                c[key] = Image.open(osp.join(self.data_path, 'cloth', c_name[key])).convert('RGB')
+                c[key] = transforms.Resize(self.fine_width, interpolation=2)(c[key])
+                cm[key] = Image.open(osp.join(self.data_path, 'cloth-mask', c_name[key]))
+                cm[key] = transforms.Resize(self.fine_width, interpolation=0)(cm[key])
 
-            c[key] = self.transform(c[key])  # [-1,1]
-            cm_array = np.array(cm[key])
-            cm_array = (cm_array >= 128).astype(np.float32)
-            cm[key] = torch.from_numpy(cm_array)  # [0,1]
-            cm[key].unsqueeze_(0)
+                c[key] = self.transform(c[key])  # [-1,1]
+                cm_array = np.array(cm[key])
+                cm_array = (cm_array >= 128).astype(np.float32)
+                cm[key] = torch.from_numpy(cm_array)  # [0,1]
+                cm[key].unsqueeze_(0)
 
         # person image
         im_pil_big = Image.open(osp.join(self.data_path, 'image', im_name))

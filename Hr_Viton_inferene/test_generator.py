@@ -57,7 +57,7 @@ def get_opt():
 
     opt = {
     'test_name': '',
-    'dataroot': "./Data2",
+    'dataroot': ".\\Data2",
     'datamode': 'test',
     'data_list': "test_pairs.txt",
     'output_dir': "Output",
@@ -196,7 +196,7 @@ def test(opt, test_loader, tocg, generator):
             # visualize
             unpaired_names = []
             for i in range(shape[0]):
-                unpaired_name = (inputs['c_name']['paired'][i].split('.')[0] + '_' + inputs['c_name'][opt['datasetting']][i].split('.')[0] + '.png')
+                unpaired_name = ("Image" + '_' + inputs['c_name'][opt['datasetting']][i].split('.')[0] + '.png')
                 unpaired_names.append(unpaired_name)
 
             save_images(output, unpaired_names, output_dir)
