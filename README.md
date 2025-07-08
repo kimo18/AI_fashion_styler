@@ -6,15 +6,13 @@ This guide explains how to clone, set up, and run the project from Facebook Rese
 
 ## Table of Contents
 
-
+- [Setup Installation](#setup-installation)
 - [Create and Activate Conda Environment](#create-and-activate-conda-environment)
 - [Densepose Repository Installation](#densepose-repository-installation)
 - [Install Dependencies](#install-dependencies)
 - [Download Pretrained Model](#download-pretrained-model)
 - [Fix Black Background Issue](#fix-black-background-issue)
 - [Run DensePose Inference](#run-densepose-inference)
-- [Setup Installation](#setup-installation)
-
 
 ---
 
