@@ -1,6 +1,14 @@
 # Fashion AI Setup and Usage Guide
 
-This guide explains how to clone, set up, and run the project from Facebook Research.
+## AI-Powered Personal Styling App
+
+We’re developing an AI-powered personal styling app that helps you choose the perfect outfit with ease.
+
+Our application allows you to virtually try on clothes by fitting outfits onto your own body image, so you can see exactly how they’ll look on you. It recommends styles tailored to your taste, helps you shop smartly, and saves you time by making fashion decisions faster and easier. All with the help of artificial intelligence.
+
+
+
+This guide explains how to clone, set up, and run the project.
 
 ### Output Sequence Example
 
