@@ -1,0 +1,7 @@
+# Ignore the ONNX folder
+onnx/
+
+# Ignore the Ollama executable file
+OllamaSetup.exe
+
+.env

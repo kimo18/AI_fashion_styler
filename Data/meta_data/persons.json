@@ -1,0 +1,35 @@
+[
+    {
+        "ID": "00006_00.jpg",
+        "age": 20,
+        "gender": "female",
+        "height": 165,
+        "weight": 55,
+        "hair_color": "brown",
+        "hairstyle": "short with bangs",
+        "skin_color": "fair",
+        "body_type": "slim"
+    },
+    {
+        "ID": "00008_00.jpg",
+        "age": null,
+        "gender": "female",
+        "height": null,
+        "weight": null,
+        "hair_color": "blonde",
+        "hairstyle": "shoulder-length",
+        "skin_color": "fair",
+        "body_type": "slim"
+    },
+    {
+        "ID": "front.jpg",
+        "age": 25,
+        "gender": "male",
+        "height": 175,
+        "weight": 65,
+        "hair_color": "black",
+        "hairstyle": "curly",
+        "skin_color": "dark_brown",
+        "body_type": "slim"
+    }
+]

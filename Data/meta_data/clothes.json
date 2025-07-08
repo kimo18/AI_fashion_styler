@@ -1,0 +1,44 @@
+[
+    {
+        "ID": "00006_00.jpg",
+        "material": "Knitwear likely made from cotton or a blend",
+        "texture": "Smooth",
+        "style": "Long-sleeved top with a round neck",
+        "color": "Black",
+        "type": "T-shirt or sweater"
+    },
+    {
+        "00064_00.jpg": {
+            "material": "Ribbed knit fabric with lace trim",
+            "texture": "Smooth, ribbed texture with intricate lace details",
+            "style": "Long-sleeved, fitted top with lace trim",
+            "color": "Black",
+            "type": "Top/Blouse"
+        }
+    },
+    {
+        "00067_00.jpg": {
+            "material": "cotton or cotton blend",
+            "texture": "smooth",
+            "style": "casual, athletic",
+            "color": "navy blue, white, light blue",
+            "type": "t-shirt"
+        }
+    },
+    {
+        "ID": "pants0.jpg",
+        "material": "cotton or cotton blend",
+        "texture": "smooth",
+        "style": "joggers",
+        "color": "beige",
+        "type": "sweatpants"
+    },
+    {
+        "ID": "pants2.jpg",
+        "material": "unknown",
+        "texture": "ribbed",
+        "style": "flared",
+        "color": "black",
+        "type": "pants"
+    }
+]

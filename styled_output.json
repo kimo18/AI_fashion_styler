@@ -1,0 +1,14 @@
+{
+    "00006_00.jpg": [
+        "00006_00.jpg",
+        "ID: pants0.jpg"
+    ],
+    "00008_00.jpg": [
+        "00006_00.jpg",
+        "ID: pants2.jpg"
+    ],
+    "front.jpg": [
+        "ID: front.jpg",
+        "ID: pants0.jpg"
+    ]
+}
