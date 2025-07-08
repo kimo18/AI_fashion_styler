@@ -1,43 +1,76 @@
-1. Clone DensePose Repo
+# DensePose Setup and Usage Guide
 
+This guide explains how to clone, set up, and run the DensePose project from Facebook Research.
+
+---
+
+## Table of Contents
+
+- [Clone Repository](#clone-repository)
+- [Create and Activate Conda Environment](#create-and-activate-conda-environment)
+- [Install Dependencies](#install-dependencies)
+- [Download Pretrained Model](#download-pretrained-model)
+- [Fix Black Background Issue](#fix-black-background-issue)
+- [Run DensePose Inference](#run-densepose-inference)
+
+---
+
+## Clone Repository
+
+Clone the Detectron2 repository and navigate to the DensePose project folder:
+
+```bash
 git clone https://github.com/facebookresearch/detectron2.git
 cd detectron2
 pip install -e .
 cd projects/DensePose
+```
+## Create and Activate Conda Environment
 
+Create a new Conda environment with Python 3.8 and activate it:
 
-
-2. Create and Activate Conda Environment (recommended)
-
+```bash
 conda create -n densepose python=3.8 -y
 conda activate densepose
+```
 
-3. Install Dependancies
+## Install Dependencies
 
+## Install the required Python dependencies:
+
+```bash
 pip install -r requirements.txt
 pip install 'git+https://github.com/facebookresearch/fvcore'
 pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
 pip install torch torchvision torchaudio av
+```
+## Download Pretrained Model
 
-4. Download from google drive this file densepose_rcnn_R_50_FPN_s1x.pkl {LINK}
-and put it in /detectron2/projects/DensePose/densepose_rcnn_R_50_FPN_s1x.pkl
+```bash
+Download the pretrained DensePose model file [`densepose_rcnn_R_50_FPN_s1x.pkl`](LINK) from Google Drive and place it in the following directory:
+```
 
-5. Black Background
+## Fix Black Background Issue
 
-in the apply_net.py {/detectron2/projects/DensePose/apply_net.py}
-change the 2 lines 
-{
+To fix the black background problem in the output images, edit the file `apply_net.py` located at:
+
+Find and replace these two lines:
+
+
+```python
 image = cv2.cvtColor(entry["image"], cv2.COLOR_BGR2GRAY)
 image = np.tile(image[:, :, np.newaxis], [1, 1, 3])
-}
-to these lines
-{
 height, width = entry["image"].shape[:2]
 image = np.zeros((height, width, 3), dtype=np.uint8)
-}
+height, width = entry["image"].shape[:2]
+image = np.zeros((height, width, 3), dtype=np.uint8)
+```
 
-6. Run this in terminal 
+## Run DensePose Inference
 
+Run DensePose Inference
+
+```bash
 python apply_net.py \
   show configs/densepose_rcnn_R_50_FPN_s1x.yaml \
   densepose_rcnn_R_50_FPN_s1x.pkl \
@@ -45,3 +78,9 @@ python apply_net.py \
   dp_segm \
   --output output/person_output.jpg \
   --opts MODEL.DEVICE cpu
+
+```
+
+
+
+
