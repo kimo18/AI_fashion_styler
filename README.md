@@ -44,7 +44,7 @@ This guide explains how to clone, set up, and run the project from Facebook Rese
 4. **Place ONNX Folder**  
    After downloading, move the entire `onnx` folder into the **root directory** of your project (i.e., the same directory as your main scripts and `.env` file).
    ```python
-   python processdata.py
+   python processData.py
    ```
 
 ## DensePose Repository Installation
