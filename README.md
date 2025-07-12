@@ -154,5 +154,22 @@ This project makes use of the following open-source libraries and research contr
 
 We are grateful to the authors and maintainers of these projects for their valuable contributions to the research and open-source communities.
 
+## 🚨 License & Usage
+
+**This repository is only for academic or research use.**
+By using any part of this project, **you agree to cite our work** in any publications, presentations, or products that incorporate it.
+
+**Commercial use is strictly prohibited.**
+
+Please cite using the following BibTeX entry:
+```bibtex
+@misc{kimo18_aifashionstyler_2025,
+  author       = {Kimo18 , Amr Abdrabo},
+  title        = {AI Fashion Styler},
+  year         = {2025},
+  howpublished = {\url{https://github.com/kimo18/AI_fashion_styler}}
+}
+
+
 
 
