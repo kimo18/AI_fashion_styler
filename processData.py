@@ -4,6 +4,7 @@ from utils.humanparse_preprocess import ImageReader
 from utils.landmark_json import Landmark_Json
 from utils.cloth_mask import ClothMask
 from utils.get_parse_agnostic import Parse_Agnostic
+from utils.Dense_parse_processor import DensePoseGenerator
 from Hr_Viton_inferene.test_generator import GenerateStyle
 from utils.extract_meta_data import GROQ_METADATA
 from utils.llama2 import LLAMA_Styler
@@ -19,6 +20,8 @@ clothes_dir = os.path.join(".","Data","cloth")
 human_parsing_dir = os.path.join(".","Data","image-parse-v3")
 human_parsing_agnosti_dir = os.path.join(".","Data","image-parse-agnostic-v3.2")
 
+dense_parse_dir = os.path.join(".","Data","image-densepose")
+
 clothes_dir = os.path.join(".","Data","cloth")
 clothes_mask_dir = os.path.join(".","Data","cloth-mask")
 
@@ -33,7 +36,7 @@ output_persons_json = os.path.join(".","Data","meta_data","persons.json")
 
 onnx_dir = "onnx"
 
-generate = False
+generate = True
 if generate:
     options = ort.SessionOptions()
     options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
@@ -47,6 +50,7 @@ if generate:
     # read image from Image_dir
     imagereader = ImageReader(image_dir)
     image , image_name = imagereader.read_batch()
+
     #run humanpase inference
     input_name = session.get_inputs()[0].name
     input_dict = {
@@ -64,6 +68,10 @@ if generate:
     landmark_json.get_landmarks_json()
 
     #########################DENSEPARSE#######################
+    
+    dense_generator = DensePoseGenerator(image_dir)
+    dense_result = dense_generator.generate(session_dense)
+    dense_generator.save(dense_result,dense_parse_dir,image_name)
 
     #########################ClOTHMASK########################
     cloth_mask = ClothMask(clothes_dir)
@@ -88,13 +96,13 @@ if False:
     metadata_generator.generate_meta_data()
 
 ##################################LLAMAV2###############
-styler = LLAMA_Styler(output_persons_json,output_clothes_json)
-styler.style()
+    styler = LLAMA_Styler(output_persons_json,output_clothes_json)
+    styler.style()
 
 
-########################HRVITON##########################
-generate_style = GenerateStyle(togc_dir,gen_dir)
-generate_style.Generate()
+    ########################HRVITON##########################
+    generate_style = GenerateStyle(togc_dir,gen_dir)
+    generate_style.Generate()
 
 
 
